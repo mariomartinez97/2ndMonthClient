@@ -1,0 +1,52 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header" data-background-color="red">
+            <h4 class="title">Stock Market</h4>
+            <p class="category">Buffalo Risk Market Summary</p>
+          </div>
+          <div class="card-content table-responsive">
+            <table class="table">
+              <thead class="text-danger">
+                <tr>
+                  <th>Ticker</th>
+                  <th>Sector</th>
+                  <th>Securities</th>
+                  <th>Industry</th>
+                  <th>Test</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--<tr *ngFor="let post of posts | FilterPipe: queryString">-->
+                <tr *ngFor="let post of posts">
+
+                  <td>
+                    <p>{{post.ticker}}</p>
+                  </td>
+                  <td>
+                    <p>{{post.sector}}</p>
+                  </td>
+                  <td>
+                    <p>{{post.security}}</p>
+                  </td>
+                  <td>
+                    <p>{{post.industry}}</p>
+                  </td>
+                  <td>
+                    <p><button (click)="gotoDetail(post.ticker)"> View Prices $</button></p>
+                  </td>
+                  <!--  <td><p><input type="text"  placeholder={{post._id}}> ></p></td> <button type="submit">View Prices</button> -->
+                  <!--<td class="text-danger">Can be anything</td> -->
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

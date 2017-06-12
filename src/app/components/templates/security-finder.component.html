@@ -1,0 +1,9 @@
+<div>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Find a stock..."/>
+  <div style="position: absolute; z-index: 8;">
+    <div *ngFor="let stock of securities | async" class="search-result"
+         (click)="gotoDetail(stock)">
+      {{stock.ticker}} | {{stock.security}}
+    </div>
+  </div>
+</div>

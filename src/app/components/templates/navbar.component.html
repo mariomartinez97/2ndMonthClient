@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+  <a class="navbar-brand" href="#"><a><img src="favicon.ico"/></a>  Buffalo Risk</a>
+        <div class="container">
+            <div class="navbar-collapse collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li><a (click)="auth.login()"  *ngIf='!auth.authenticated'>Login</a></li>
+                <li><a (click)="auth.logout()"  *ngIf='auth.authenticated'>Logout</a></li>
+            </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+      </nav>
