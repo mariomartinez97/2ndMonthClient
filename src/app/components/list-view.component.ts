@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import {Router} from '@angular/router';
 import { SecuritiesService } from '../services/securities.service';
-
+import {FilterPipe} from '../components/pipes';
 
 @Component({
   selector: 'br-listview',

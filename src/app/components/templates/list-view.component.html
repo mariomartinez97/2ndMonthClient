@@ -20,7 +20,7 @@
               </thead>
               <tbody>
                 <!--<tr *ngFor="let post of posts | FilterPipe: queryString">-->
-                <tr *ngFor="let post of posts">
+                <tr *ngFor="let post of posts | FilterPipe: queryString">
 
                   <td>
                     <p>{{post.ticker}}</p>

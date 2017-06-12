@@ -9,7 +9,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { SecurityFinderComponent } from './components/security-finder.component';
 import { ChartComponent } from './components/chart.component';
 import {ListViewComponent} from './components/list-view.component';
-//import {FilterPipe} from './components/pipes';
+import {FilterPipe} from './components/pipes';
 
 import { AuthService } from './services/auth.service';
 import { SecuritiesService } from './services/securities.service';
@@ -22,7 +22,7 @@ import { SecuritySearchService } from './services/security-search.service';
     SecurityFinderComponent,
     ChartComponent,
     ListViewComponent,
-    //FilterPipe
+    FilterPipe
   ],
   imports: [
     BrowserModule,
