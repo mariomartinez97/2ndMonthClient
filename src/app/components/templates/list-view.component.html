@@ -6,6 +6,7 @@
           <div class="card-header" data-background-color="red">
             <h4 class="title">Stock Market</h4>
             <p class="category">Buffalo Risk Market Summary</p>
+            <input type="text" [(ngModel)]="queryString" id="search" placeholder="Search to type">
           </div>
           <div class="card-content table-responsive">
             <table class="table">
@@ -20,7 +21,7 @@
               </thead>
               <tbody>
                 <!--<tr *ngFor="let post of posts | FilterPipe: queryString">-->
-                <tr *ngFor="let post of posts | FilterPipe: queryString">
+                <tr *ngFor="let post of posts ">
 
                   <td>
                     <p>{{post.ticker}}</p>

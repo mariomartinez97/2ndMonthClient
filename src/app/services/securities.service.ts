@@ -32,7 +32,7 @@ import { Headers, Http } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/operator/toPromise';
+//import 'rxjs/add/operator/toPromise';
 //import 'rxjs/add/operator/map';
 
 import { Security } from '../model/security';
