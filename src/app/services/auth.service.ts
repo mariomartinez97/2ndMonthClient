@@ -1,5 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 import 'rxjs/add/operator/map';
 import { tokenNotExpired } from 'angular2-jwt';
@@ -8,14 +9,14 @@ import { Observable } from "rxjs/Observable";
 declare var Auth0Lock: any;
 
 @Injectable()
-export class AuthService implements OnInit {
-  lock: any;
+export class AuthService {
+  //lock: any;
+  lock = new Auth0Lock('d3a_Rw2yO4Trh_jCCCP7wFaNywSS7MhF', 'rodrigocso.auth0.com');
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) {
 
-  ngOnInit(): void {
+  //ngOnInit(): void {
     console.log('PS INITIALIZED');
-    this.lock = new Auth0Lock('d3a_Rw2yO4Trh_jCCCP7wFaNywSS7MhF', 'rodrigocso.auth0.com');
     this.lock.on('authenticated', (authResult: any) => {
       this.lock.getProfile(authResult.idToken, (error: any, profile: any) => {
         if (error) {
@@ -47,7 +48,7 @@ export class AuthService implements OnInit {
     // Check if there's an unexpired JWT
     // This searches for an item in localStorage with key == 'id_token'
     //return tokenNotExpired('id_token');
-    return tokenNotExpired("token");
+    return tokenNotExpired('token');
   }
 
   public logout(): void {

@@ -3,9 +3,16 @@
         <div class="container">
             <div class="navbar-collapse collapse navbar-right">
               <ul class="nav navbar-nav">
-                <li><a (click)="auth.login()"  *ngIf='!auth.authenticated'>Login</a></li>
-                <li><a (click)="auth.logout()"  *ngIf='auth.authenticated'>Logout</a></li>
+                <li><a routerLink="" (click)="auth.login()"  *ngIf="!auth.authenticated()">Login</a></li>
+                <li><a href='' (click)="auth.logout()"  *ngIf="auth.authenticated()">Logout</a></li>
             </ul>
             </div><!--/.nav-collapse -->
         </div>
       </nav>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+
+
+      <!--<div class="alert alert-success"   *ngIf="auth.authenticated()">You are logged in</div>
+      <div class="alert alert-danger"   *ngIf="!auth.authenticated()">You are not logged in</div>-->

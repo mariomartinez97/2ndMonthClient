@@ -11,16 +11,27 @@ export class NavbarComponent {
   profile: any = null;
 
   constructor(private auth: AuthService) {
-    console.log('caralho');
     this.profile = JSON.parse(localStorage.getItem('profile'));
+    console.log("Auth profile: ", this.profile);
   }
   login() {
     this.auth.login();
+    this.loginCheck();
   }
   logout() {
     this.auth.logout();
   }
-
+  loginCheck() : number
+    {
+      if(this.profile != null)
+      {
+        return  1;
+      }
+      else
+      {
+        return 0;
+      }
+    }
 }
 // import { Component } from '@angular/core';
 //
